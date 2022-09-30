@@ -36,3 +36,65 @@ if (tipoDeSuscripcion = "free"){
 }else if(tipoDeSuscripcion = "Expert+"){
     console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
 }
+
+
+let i = 0;
+while (i < 5){  
+    console.log("Hola");
+    i++;
+}
+
+let x = 0;
+while (i >= 2){  
+    console.log("Hola");
+    i++;
+}
+
+while (true){
+    let pregunta = prompt("cuanto es 2 + 2");
+    if (parseInt(pregunta) == 4){
+        console.log("felicitaciones respuesta Correcto");
+        break;
+    }else{
+        console.log("respuesta incorrecta");
+    }
+}
+
+
+const array = [1,'holi',true,undefined,null,{}];
+
+const objeto = {
+    nombre: "Yakin",
+    edad: 25,
+    comidaFavorita: "Pizza"
+}
+
+
+function imprimirPrimerElemento(array){
+    console.log(array[0]);
+}
+
+function imprimirTodosLosElementos(array){
+    for (let i = 0; i < array.length; i++){
+        console.log(array[i]);
+    }
+}
+
+const objeto = {
+    nombre: "Yakin",
+    edad: 25,
+    comidaFavorita: "Pizza"
+}  
+
+function imprimirElementosObjeto(objeto){
+    for (let i in objeto){
+        console.log(objeto[i]);
+    }
+}
+
+function imprimirElementosPorElementoObjeto(objeto){
+    const arr = Object.values(obj);
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+}

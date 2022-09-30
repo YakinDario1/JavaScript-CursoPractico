@@ -2,11 +2,13 @@
 
 ## Variables y operaciones
 
-**Responde la siguiente preguntas:** 
+**Responde la siguiente preguntas:**
 
 * ¿Qué es una variable y para qué sirve?
+
   Una variable es un espacio en memoria que nos permite almacenar informacion. una caja de informacion dependiendo el tipo de dato y estructura que soporta el lenguaje
 * ¿Cuál es la diferencia entre declarar e inicializar una variable?
+
   Declara es cuando decimos a javaScript que vamos a crear una variable con un nombre.
   Mientras que inicializar es asignarle un valor a esa variable.
   Ejemplo:
@@ -19,6 +21,7 @@
   ```
 * ¿Cuál es la diferencia entre sumar números y concatenar strings?
 * ¿Cuál operador me permite sumar o concatenar?
+
   con el Operador de (+)
 
 ### Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
@@ -57,13 +60,12 @@ console.log(`Tu nombre completo: ${nombreCompleto}`);
 console.log(`tu Dinero es: ${dineroReal}`);
 ```
 
-
 ## Funciones
 
 Responde las siguientes preguntas en la sección de comentarios:
 
-* **¿Qué es una función?**
-  Las fuciones nos permite encapsular Bloque de codigo para reutilizar y ejecutar en el Futuro.
+* **¿Qué es una función?
+* **Las fuciones nos permite encapsular Bloque de codigo para reutilizar y ejecutar en el Futuro.
 * **¿Cuándo me sirve usar una función en mi código?**
   Nos sirve cuando tenemos variables o bloques de codigo muy parecidos, que podemos encapsular para reutilizar mas de una vez en el futuro.
 * **¿Cuál es la diferencia entre parámetros y argumentos de una función?**
@@ -80,7 +82,7 @@ const nickname = "juandc";
 console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
 ```
 
-Resultado: 
+Resultado:
 
 ```
 function nombreCompleto(nombre, apellido){
@@ -91,7 +93,6 @@ function saludo(nombre,apellido,user){
     console.log(`Hola ${completo} ${user}`);
 }
 ```
-
 
 ## Condicionales
 
@@ -126,7 +127,6 @@ switch (tipoDeSuscripcion) {
 }
 ```
 
-
 ### Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 
 ```
@@ -143,18 +143,113 @@ if (tipoDeSuscripcion = "free"){
 }
 ```
 
-
 ### Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 
 > 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
-
-
 
 ## Ciclos
 
 Responde las siguientes preguntas en la sección de comentarios:
 
 * ¿Qué es un ciclo?
+
+  La forma de ejecutar un bloque de codigo hasta que se cumpla ciertas condiciones
 * ¿Qué tipos de ciclos existen en JavaScript?
+
+  for, do while , while
 * ¿Qué es un ciclo infinito y por qué es un problema?
+
+  Es cuando la validacion  de nuestro condicionales nunca se cumple y termina dañando nuestra aplicacion.
 * ¿Puedo mezclar ciclos y condicionales?
+
+si se puede 
+
+
+### Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+```
+for (let i = 0; i < 5; i++) {
+    console.log("El valor de i es: " + i);
+}
+
+for (let i = 10; i >= 2; i--) {
+    console.log("El valor de i es: " + i);
+}
+```
+
+
+### Escribe un código en JavaScript que le pregunte a los usuarios cuánto es `2 + 2`. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+
+> 💡 Pista: puedes usar la función prompt de JavaScript.
+
+```
+while (true){
+    let pregunta = prompt("cuanto es 2 + 2");
+    if (parseInt(pregunta) == 4){
+        console.log("felicitaciones respuesta Correcto");
+        break;
+    }else{
+        console.log("respuesta incorrecta");
+    }
+}
+```
+
+
+## Listas
+
+### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+* ¿Qué es un array?
+
+  Es una lista de elementos
+
+  ```
+  const array = [1,'holi',true,undefined,null,{}];
+  ```
+* ¿Qué es un objeto?
+
+  Es un lista de elementos pero cada elemento tiene un nombre cable.
+
+  ```
+  const objeto = {
+      nombre: "Yakin",
+      edad: 25,
+      comidaFavorita: "Pizza"
+  }
+  ```
+* ¿Cuándo es mejor usar objetos o arrays?
+
+  Ocupamos objetos cuando el conjuto de elemento es mu grande y de distinto tipos de valores.
+* ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+
+Si. Los array pueden gurdar objetos, Y los objetos pueden guardar array entre sus propiedades. 
+
+
+### 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+```
+function imprimirPrimerElemento(array){
+    console.log(array[0]);
+}
+```
+
+### 3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+```
+function imprimirTodosLosElementos(array){
+    for (let i = 0; i < array.length; i++){
+        console.log(array[i]);
+    }
+}
+```
+
+### 4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
+
+```
+function imprimirElementosPorElementoObjeto(objeto){
+    const arr = Object.values(obj);
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+}
+```

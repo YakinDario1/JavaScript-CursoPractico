@@ -98,3 +98,17 @@ function imprimirElementosPorElementoObjeto(objeto){
         console.log(arr[i])
     }
 }
+
+const tipoDeSuscripciones = {
+    free: "Solo puedes tomar los cursos gratis",
+    basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+    expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+    expertPlus: "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+};
+function conseguirTiposSuscripciones(suscripcion){
+    if(tipoDeSuscripciones[suscripcion]){
+        console.log(tipoDeSuscripciones[suscripcion]);
+        return;
+    }
+    console.warn("No existe esa suscripcion");
+}

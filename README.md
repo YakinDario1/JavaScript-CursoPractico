@@ -147,6 +147,23 @@ if (tipoDeSuscripcion = "free"){
 
 > 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
 
+```
+const tipoDeSuscripciones = {
+    free: "Solo puedes tomar los cursos gratis",
+    basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+    expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+    expertPlus: "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+};
+function conseguirTiposSuscripciones(suscripcion){
+    if(tipoDeSuscripciones[suscripcion]){
+        console.log(tipoDeSuscripciones[suscripcion]);
+        return;
+    }
+    console.warn("No existe esa suscripcion");
+}
+```
+
+
 ## Ciclos
 
 Responde las siguientes preguntas en la sección de comentarios:
@@ -162,8 +179,7 @@ Responde las siguientes preguntas en la sección de comentarios:
   Es cuando la validacion  de nuestro condicionales nunca se cumple y termina dañando nuestra aplicacion.
 * ¿Puedo mezclar ciclos y condicionales?
 
-si se puede 
-
+si se puede
 
 ### Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
 
@@ -176,7 +192,6 @@ for (let i = 10; i >= 2; i--) {
     console.log("El valor de i es: " + i);
 }
 ```
-
 
 ### Escribe un código en JavaScript que le pregunte a los usuarios cuánto es `2 + 2`. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
 
@@ -193,7 +208,6 @@ while (true){
     }
 }
 ```
-
 
 ## Listas
 
@@ -222,8 +236,7 @@ while (true){
   Ocupamos objetos cuando el conjuto de elemento es mu grande y de distinto tipos de valores.
 * ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
 
-Si. Los array pueden gurdar objetos, Y los objetos pueden guardar array entre sus propiedades. 
-
+Si. Los array pueden gurdar objetos, Y los objetos pueden guardar array entre sus propiedades.
 
 ### 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
 
